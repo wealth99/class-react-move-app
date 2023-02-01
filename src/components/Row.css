@@ -15,6 +15,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
+    cursor: pointer;
 }
 
 .slider .row__posters::-webkit-scrollbar {
@@ -37,7 +38,7 @@
 
 .slider .btn__arrow {
     position: absolute;
-    top: 81px;
+    top: 82px;
     width: 100px;
     height: 450px;
     border: 0;

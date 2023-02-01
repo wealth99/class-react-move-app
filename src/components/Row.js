@@ -1,15 +1,23 @@
 import React, { useEffect, useCallback, useState } from "react";
 import axios from "../api/axios";
+import MovieModal from "./MovieModal";
 import "./Row.css";
 
 const Row = ({ title, id, fetchUrl, isLargeRow }) => {
 
     const [movies, setMovies] = useState([]);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [movieSelected, setMovieSelected] = useState({});
 
     const fetchMovieData = useCallback(async () => {
         const request = await axios.get(fetchUrl);
         setMovies(request.data.results);
     }, [fetchUrl]);
+
+    const handleImgClick = (movie) => {
+        setModalOpen(true);
+        setMovieSelected(movie)
+    }
 
     useEffect(() => {
         fetchMovieData();
@@ -28,6 +36,7 @@ const Row = ({ title, id, fetchUrl, isLargeRow }) => {
                                 isLargeRow ? movie.poster_path : movie.backdrop_path
                             }`}
                             alt={movie.name}
+                            onClick={() => handleImgClick(movie)}
                         />
                     ))}
                     <button
@@ -49,6 +58,12 @@ const Row = ({ title, id, fetchUrl, isLargeRow }) => {
                         {">"}
                     </button>
                 </div>
+
+                {
+                    modalOpen && (
+                        <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
+                    )
+                }
             </section>
         )
     } else {

@@ -1,0 +1,44 @@
+.presenttation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+    background-color: black;
+    color: #fff;
+}
+
+.wrapper-modal .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.wrapper-modal .modal__poster-img {
+    width: 100%;
+    min-height: 430px;
+}
+
+.wrapper-modal .modal__content {
+    padding: 30px;
+}
