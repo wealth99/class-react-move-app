@@ -24,3 +24,14 @@
 .nav .nav__avater {
     width: 30px;
 }
+
+.nav .nav__input {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(0,0,0,0.5)
+}

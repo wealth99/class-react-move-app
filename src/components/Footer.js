@@ -12,7 +12,7 @@ const Footer = () => {
         width: 100%;
         padding: 40px 0;
         margin-top: 40px;
-        border-top: 1px solid rgb(25, 25, 25);
+        /* border-top: 1px solid rgb(25, 25, 25); */
         z-index: 100;
 
         @media (max-width: 768px) {
