@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 import "./MovieModal.css";
 
 const MovieModal = ({
@@ -11,9 +12,13 @@ const MovieModal = ({
     vote_average,
     setModalOpen
 }) => {
+
+    const ref = useRef();
+    useOnClickOutside(ref, () => {setModalOpen(false)});
+
     return (
         <div className="presenttation">
-            <div className="wrapper-modal">
+            <div className="wrapper-modal" ref={ref}>
                 <button type="button" className="modal-close" onClick={() => setModalOpen(false)}>X</button>
                 <img
                     className="modal__poster-img"
