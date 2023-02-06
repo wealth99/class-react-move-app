@@ -1,6 +1,6 @@
 .slider {
     position: relative;
-    padding: 10px 0 10px 30px;
+    padding: 10px 20px 30px;
     box-sizing: border-box;
 }
 
@@ -24,16 +24,16 @@
 
 .slider .row__poster {
     flex: 0 0 auto;
-    width: 350px;
+    width: 100%;
     height: 200px;
-    margin-right: 15px;
+    /* margin-right: 15px; */
     border-radius: 10px;
 }
 
 .slider .row__poster.row__posterLarge {
-    width: 300px;
+    width: 100%;
     height: 450px;
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
 
 .slider .btn__arrow {
@@ -65,4 +65,22 @@
 
 .slider .btn__arrow.right {
     right: 0;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1 !important;
+    background: gray !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: white !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: white !important;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
 }

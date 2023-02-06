@@ -29,22 +29,22 @@ const SearchPage = () => {
     const renderSearchResults = () => {
         return searchResults.length > 0 ? (
             <section className="search-container">
-                {searchResults.map((movie) => {
-                    if(movie.backdrop_path !== null && movie.media_type !== "person") {
-                        const movieImageUrl = `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`;
-                        return (
-                            <div className="movie" key={movie.id}>
-                                <div className="movie__column-poster" onClick={() => navigate(`/${movie.id}`)}>
-                                    <img
-                                        src={movieImageUrl}
-                                        alt="movie"
-                                        className="movie__poster"
-                                    />
+                {
+                    searchResults
+                        .filter(movie => movie.backdrop_path !== null && movie.media_type !== "person")
+                        .map(movie => (
+                                <div className="movie" key={movie.id}>
+                                    <div className="movie__column-poster" onClick={() => navigate(`/${movie.id}`)}>
+                                        <img
+                                            src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                                            alt="movie"
+                                            className="movie__poster"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
+                            )
                         )
-                    }
-                })}
+                }
             </section>
         ) : (
             <section className="no-results">
