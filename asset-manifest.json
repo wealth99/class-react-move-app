@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/class-react-move-app/static/css/main.a3d12e96.css",
+    "main.js": "/class-react-move-app/static/js/main.da0a4763.js",
+    "static/js/787.fe52058f.chunk.js": "/class-react-move-app/static/js/787.fe52058f.chunk.js",
+    "index.html": "/class-react-move-app/index.html",
+    "main.a3d12e96.css.map": "/class-react-move-app/static/css/main.a3d12e96.css.map",
+    "main.da0a4763.js.map": "/class-react-move-app/static/js/main.da0a4763.js.map",
+    "787.fe52058f.chunk.js.map": "/class-react-move-app/static/js/787.fe52058f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3d12e96.css",
+    "static/js/main.da0a4763.js"
+  ]
+}
