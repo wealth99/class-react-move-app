@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Nav from './components/Nav';
 import DetailPage from "./pages/DetailPage";
 import MainPage from "./pages/MainPage";
-import SearchPage from "./pages/searchPage";
+import SearchPage from "./pages/SearchPage";
 
 const Layout = () => {
     return (

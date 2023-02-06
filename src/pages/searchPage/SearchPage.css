@@ -1,0 +1,41 @@
+.searchContent {
+    height: 100vh;
+    background-color: black;
+}
+
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5rem 0;
+    background-color: black;
+    text-align: center;
+}
+
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 8rem;
+    color: #c5c5c5;
+}
+
+.movie {
+    width: 49%;
+    padding-bottom: 7rem;
+}
+
+.movie__column-poster {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.movie__column-poster:hover {
+    transform: scale(1.1);
+}
+
+.movie__poster {
+    width: 90%;
+    border-radius: 5px;
+}
